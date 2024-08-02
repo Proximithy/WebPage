@@ -1,0 +1,563 @@
+
+/* ESTILO GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #040413;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #46e2bb;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    
+}
+h2.titulo span{
+    color: #46e2bb;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #70ddc2;
+    transform: scale(1.08);
+    transition: .3s;
+    display: inline-block;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 20px 4%;
+
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a{
+    font-size: 25px;
+    color:rgb(85, 85, 85);
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+
+header nav.menu-desktop a:hover{
+    color: #46e2bb;
+    transform: scale(1.07);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTILO MENU MOBILE */
+.abrir-menu {
+    width: 70%; /* Defina a largura que desejar */
+}
+
+
+.btn-abrir-menu i{
+    color: #46e2bb;
+    font-size: 45px;
+}
+.menu-mobile{
+    background-color: #060618;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.btn-abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 6%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #46e2bb;
+    font-size: 30px;
+
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 9%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #09e8b0;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.5); /* Um fundo semi-transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* Um valor alto para garantir que esteja sobre todos os outros elementos */
+    display: none; /* Começa oculto */
+    backdrop-filter: blur(4px);
+}
+
+.abrir-menu + .overlay-menu {
+    display: block; /* Exibe quando o menu é aberto */
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 100px 4% 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.txt-topo-site {
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 21px;
+}
+
+.topo-do-site h1{
+    color: #ffff;
+    font-size: 50px;
+    line-height: 50px;
+    margin-top: 100px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #46e2bb;
+    font-style: oblique;
+    font-stretch: expanded;
+    font-size: 65px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #ffff;
+    margin: 40px 0;
+    margin-bottom: 40px; /* ALTERAR 1 BOTÃO SEM AFETAR OUTRO */
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top:40px;
+    }
+}
+/* ESTILO DAS ESPECIALIDADES */
+section.especialidades{
+    padding: 40px 4%;
+    margin-top: 70px;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+
+}
+.especialidades .especialidades-box{
+    color: #ffff;
+    padding: 40px;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    margin-top: 50px;
+    transition: 0.4s;
+
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 19px #63c4ad9b;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 65px;
+    color: #46e2bb;
+
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 33px;
+    margin: 20px 0;
+}
+
+/* ESTILO DO SOBRE */
+section.sobre{
+    padding: 200px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+    text-align: justify;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    
+}
+
+.sobre .txt-sobre h2 span{
+    color: #46e2bb;
+    display: block;
+    text-align: justify;
+}
+
+.sobre .txt-sobre p{
+    margin: 15px 0;
+    text-align: justify; /* Garante que o texto seja justificado */
+    text-align-last: justify; /* Garante que a última linha também seja justificada */
+    font-weight: bolder;
+    font-stretch: expanded;
+}
+
+.sobre .txt-sobre p{
+    margin-bottom: 20px;
+}
+
+.btn-social button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #46e2bb;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .3s;
+}
+
+/* ESTILO DO PORTFÓLIO */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #0ba9893c;
+    /* Isso é importante para centralizar horizontalmente */
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.img-port {
+    width: 350px;
+    height: 460px;
+    background-color: #46e2bb;
+    margin: auto; /* Isso centraliza horizontalmente */
+    margin-bottom: 10%;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000d0;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO DE FORMULÁRIO DE CONTATO */
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #09092f55;
+    border: 0;
+    outline: 0;
+    padding: 30px 20px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form input::placeholder{
+    color: #46e2bb;
+}
+
+form textarea{
+    resize: none;
+    max-height: 1000px;
+}
+
+form .btn-enviar{
+    margin-top: 15px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit]{
+    width: 200px;
+    background-color: #46e2bb;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.formulario textarea::placeholder {
+    color: #46e2bb;
+}
+
+/* ESTILO RODAPÉ */
+
+footer{
+    padding: 30px 4%;
+    box-shadow: 0 0 15px 10px #0ba9893c;
+}
+
+footer .flex{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.border{
+    border-top: 4px solid #46e2bb
+}
+
+
+footer .line-footer p i{
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-footer {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; /* ou ajuste conforme necessário */
+    margin-bottom: 2px; /* Ajuste a margem inferior conforme necessário */
+}
+
+
+@media screen and (max-width: 1137px){
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+    
+    /* TOPO DO SITE TEXTO */
+
+    section.topo-do-site{
+        padding: 10px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px; /* Reduzir o tamanho da fonte */
+         /* Ajustar a altura da linha */
+         /* Ajustar a margem superior */
+    }
+    .txt-topo-site p{
+        font-size: 18px; /* Reduzir o tamanho da fonte */
+        line-height: 1.2; /* Ajustar a altura da linha */
+        margin-top: 20px; /* Ajustar a margem superior */
+    
+    }
+
+    .interface {
+        max-width: 100%; /* Defina a largura máxima em porcentagem */
+    }
+
+    .img-topo-site img {
+        width: 100%; /* Ajuste a largura da imagem conforme necessário */
+        height: auto; /* Isso garante que a altura seja ajustada automaticamente */
+        display: block; /* Isso garante que a imagem seja centralizada */
+        margin: 0 auto; /* Isso centraliza a imagem horizontalmente */
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    section.topo-do-site .flex{
+        align-items: center;
+        justify-content: center;
+        gap: 90px;
+    }
+
+    /* ESPECIALIDADES */
+
+    section.especialidades{
+        padding: 40px 10%;
+    }
+
+    /* SOBRE */
+    section.sobre {
+        padding: 60px 10%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+
+    .sobre .txt-sobre h2 span{
+        font-size: 30px;
+        color: #46e2bb;
+        display: flexbox;
+        text-align: center;
+    }   
+
+    .btn-social{
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* PORTFOLIO */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    
+    .img-port {
+        width: 100%;
+        max-width: 350px;
+        height: 460px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex{
+        gap: 40px;
+    }
+    
+    /* RODAPÉ */
+    footer .flex{
+        flex-direction: column;
+    }
+
+}
